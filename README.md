@@ -1,6 +1,6 @@
 # VHClass
 
-_O4995 (copywright assetion)_
+_O4995 (copywright assertion)_
 
 BSD License
 
