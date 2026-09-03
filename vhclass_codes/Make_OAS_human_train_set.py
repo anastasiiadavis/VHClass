@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Apr  3 21:55:30 2025
+# © 2026. Triad National Security, LLC. All rights reserved.
 
-@author: 334992
 """
 
 # Need to get 480 human sequences from OAS databse for training set

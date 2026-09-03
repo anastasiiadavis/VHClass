@@ -1,5 +1,7 @@
-# -*- coding: utf-8 -*-
+"""
+# © 2026. Triad National Security, LLC. All rights reserved.
 
+"""
 import pandas as pd
 import argparse
 
@@ -29,8 +31,6 @@ len_filtered_vh_2 = pd.DataFrame(len_filtered_vh, columns = ['sequence'])
 
 
 # fasta
-
-#save the randomized data in fasta format for feeding into classifier (this generates 17K sequences)
 
 fn_to_blast =args.save_to_fasta
 

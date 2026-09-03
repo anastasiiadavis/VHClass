@@ -1,4 +1,7 @@
+"""
+# © 2026. Triad National Security, LLC. All rights reserved.
 
+"""
 import joblib
 import pandas as pd
 from read_fast_to_df_publ import read_fasta_to_df_publ
@@ -11,7 +14,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("trained_model", type=str,
                     help="path to the joblib file with trained model")
 parser.add_argument("k", type=int,
-                    help="k in k-mer: how many amino acids to ecode kemrs with",default=3)
+                    help="k in k-mer: how many amino acids to ecode kemrs with",default=3,choices=[2,3])
 parser.add_argument("data_to_label", type=str,
                     help="fasta file with the data to be labelled (or validation set for testing)") 
 parser.add_argument("save_predictions", type=str,
@@ -26,7 +29,7 @@ rf_loaded = joblib.load(args.trained_model)
 
 data = args.data_to_label
 
-seqs = read_fasta_to_df(data)
+seqs = read_fasta_to_df_publ(data)
 
 feat_array = np.zeros((len(seqs), 20**args.k), dtype=int)
 

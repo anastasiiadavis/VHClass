@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Sep 19 14:48:24 2025
+# © 2026. Triad National Security, LLC. All rights reserved.
 
-@author: 334992
 """
-
 # this code claculates parameters to assess the performance of classifier
 
 import pandas as pd

@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+"""
+# © 2026. Triad National Security, LLC. All rights reserved.
+
+"""
 
 import pandas as pd
 import numpy as np

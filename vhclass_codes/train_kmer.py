@@ -1,10 +1,14 @@
+"""
+# © 2026. Triad National Security, LLC. All rights reserved.
+
+"""
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import pandas as pd
 from read_fast_to_df_publ import read_fasta_to_df_publ
 import numpy as np
 from encode_kmer_publ import encode_kmer_publ
-
+from pathlib import Path
 
 import argparse
 
@@ -12,15 +16,18 @@ parser = argparse.ArgumentParser()
 parser.add_argument("data", type=str,
                     help="path to the fasta file with training data")
 parser.add_argument("k", type=int,
-                    help="how many amino acids to ecode kmers with",default=3)
+                    help="how many amino acids to ecode kmers with",default=3,choices=[2,3])
 parser.add_argument("to_save", type=str,
                     help="path to where to store the trained model, .joblib")   
 #"path/to_save.joblib"                 
 # encode training data s k=mers with k = 3 #############################################
 args = parser.parse_args()
 seqs = read_fasta_to_df_publ(args.data)
-#k = 3                                                                                                # make an argument for argparse, if more than 3, say that not supported
 
+path = Path(args.data)
+if not path.is_file():
+        parser.error(f"File '{args.data}' does not exist")
+        
 feat_array = np.zeros((len(seqs), 20**args.k), dtype=int)
 
 for items in range(len(seqs)):
