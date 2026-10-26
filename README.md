@@ -1,6 +1,6 @@
 # VHClass
 
-_O4995 (copywright assertion)_
+_O4995 (copywright assetion)_
 
 BSD License
 
@@ -59,6 +59,8 @@ The fasta files provided here were preprocessed (as described in the Application
 -  '20k_fin_training.fasta'   (compiled set of human and camelid sequences, used for model training)
 - folder 'validation_sets' contains seven validation sets, used in this work
 -  folder 'abnativ_scores_validation_sets' contains the outputs of the AbNativ tool analysis of all the validation sets. For validation set 1, the folder also contains the sequences with high and low VHH scores (used in Figure 1B)
+
+
 
 
  
