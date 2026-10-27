@@ -41,7 +41,7 @@ Custom python scripts (found in the [_vhclass_codes_](https://github.com/anastas
 # **Generating predictions using provided trained model**
 Download the provided model [_rf_model_3mer.joblib_](https://github.com/anastasiiadavis/VHClass/blob/main/vhclass_codes/rf_model_3mer.joblib) and run the script [_kmer_based_Vhclass.py_](https://github.com/anastasiiadavis/VHClass/blob/main/vhclass_codes/kmer_based_Vhclass.py) with the following input positional arguments:
 - path to trained model
-- number of amino acids to encode as kmers (2 or 3, 3 is default, _note k=2 was not tested here, but will result in a prediciotn, k=4 will crash due to size of the feature vector_)
+- number of amino acids to encode as kmers (2 or 3, 3 is default, _note k=2 was not tested here, but will result in a prediciotn)
 - path to fasta file with the data to be classified
 - path to the .csv file were the predictions will be saved
 - True or False flag: True if the data to be classified already has labels (validation datasets)
@@ -50,7 +50,7 @@ Download the provided model [_rf_model_3mer.joblib_](https://github.com/anastasi
 # **Training the model using provided public datasets**
 To retrain the model using the provided datasets, use script _train_kmer.py_ with the following positional arguments:
 - path to the provided training set ([20k_fin_trainset_simple_filter.fasta](https://github.com/anastasiiadavis/VHClass/blob/main/training_and_validation_data/20k_fin_training.fasta))
-- number of amino acids to encode as kmers (2 or 3, 3 is default, _note k=2 was not tested here, but will result in a prediciotn, k=4 will crash due to size of the feature vector_)
+- number of amino acids to encode as kmers (2 or 3, 3 is default, _note k=2 was not tested here, but will result in a prediciotn)
 - path to store the trained model in the joblib format
 
 # **List of the Provided Data (fasta files)**
